@@ -3,20 +3,7 @@
 div {
     background: @layouts-var-bgcolor;
 }
-/*.ngts-panel {
-    &.ngts-sidebar {
-        border: 5px solid #5689CD;
-    }
 
-    &.ngts-content {
-        border: 5px solid #7AEF95;
-    }
-
-    &.ngts-content-split {
-        border: 5px solid #E5A9E9;
-
-    }
-}*/
 .ngts-panel {
     &.ngts-sidebar {
         &.ngts-content {
@@ -37,6 +24,10 @@ div {
 
         &.ngts-content-split {
             grid-template-columns: 1fr 1fr;
+        }
+
+        &.ngts-content-divide {
+            grid-template-rows: 1fr 1fr;
         }
     }
 }
@@ -63,6 +54,10 @@ div {
 
             &.ngts-content-split {
                 grid-template-columns: 100vw;
+                grid-template-rows: 1fr 1fr;
+            }
+
+            &.ngts-content-divide {
                 grid-template-rows: 1fr 1fr;
             }
         }

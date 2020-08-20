@@ -1,21 +1,20 @@
 ﻿
-<div class="ngts-panel ngts-sidebar ngts-content ngts-content-split">
-    <div data-bind="component:'dashboard-sidebar'"></div>
+<div class="ngts-panel ngts-sidebar ngts-content">
+    <div data-bind="component:{name:'dashboard-sidebar', params:states}"></div>
     <div>
-        <div>
-            <h2 data-bind="text:title"></h2>
+        <div data-bind="visible:states.home">
+            <h2>Home</h2>
+            <!--<div data-bind="component:'dashboard-albums'"></div>-->
         </div>
-        <div data-bind="component:'dashboard-albums'"></div>
-        <div data-bind="component:'dashboard-photos'"></div>
-        <div data-bind="component:'dashboard-posts'"></div>
-        <div data-bind="component:'dashboard-to-do'"></div>
-        <div data-bind="component:'dashboard-to-dos'"></div>
-    </div>
-    <div>
-        <div class="ngts-panel ngts-content ngts-content-split">
-            <div data-bind="component:'dashboard-to-do'"></div>
-            <div data-bind="component:'dashboard-to-do'"></div>
+        <div data-bind="visible:states.photos">
+            <div data-bind="component:'dashboard-photos'"></div>
         </div>
-        <div data-bind="component:'dashboard-to-dos'"></div>
+        <div data-bind="visible:states.albums">
+            <div data-bind="component:'dashboard-albums'"></div>
+        </div>
+        <div data-bind="visible:states.posts">
+            <div data-bind="component:'dashboard-posts'"></div>
+        </div>
     </div>
+
 </div>
