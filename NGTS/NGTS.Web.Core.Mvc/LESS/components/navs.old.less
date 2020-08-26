@@ -1,0 +1,103 @@
+﻿@import "variables.less";
+
+
+.ngts-nav.ngts-default{
+    position:relative;
+    display:flex;
+    align-items:center;
+    h1,h2,h3,h4,h5,h6,h7{
+        margin:0;
+    }
+    > ul{
+        display:none;
+    }
+}
+.burger {
+    display: inline-block;
+    cursor: pointer;
+    position:absolute;
+    //top:50%;
+    right:10px;
+    //transform:translateY(-50%);
+}
+
+.burger div {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change > div:first-child {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change > div:nth-child(2) {
+    opacity: 0;
+}
+
+.change > div:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (min-width : @var-bp-small) {
+    .ngts-nav.ngts-default {
+        padding: 10px;
+        > ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-size: 1.2em;
+
+            > li {
+                height: 50px;
+                /*background: #f0f;*/
+                /*margin: 5px 0 5px 15px;*/
+                button, a, .ngts-btn {
+                    padding: 5px 10px;
+                    width: 100%;
+                    height: inherit;
+                    box-sizing: border-box;
+                    border: none;
+                    border-radius: 0;
+                    background: none;
+                }
+
+                i {
+                    width: 50px;
+                    text-align: center;
+                }
+            }
+        }
+
+        hr {
+            border-color: @var-color-accent;
+            border-style: solid;
+            border-width: 2px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        background: @var-color-primary;
+        color: @var-color-primary-contrast;
+
+        li {
+            button, a, .ngts-btn {
+                &:hover {
+                    background-color: lighten(@var-color-primary,10%);
+                }
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+    }
+}
+

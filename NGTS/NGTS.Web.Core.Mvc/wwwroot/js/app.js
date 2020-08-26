@@ -27,5 +27,8 @@
         viewModel: { require: "dashboard/scripts/dashboard-to-dos" },
         template: { require: "text!dashboard/templates/dashboard-to-dos.html" }
     });
+
+
+
     ko.applyBindings();
 });

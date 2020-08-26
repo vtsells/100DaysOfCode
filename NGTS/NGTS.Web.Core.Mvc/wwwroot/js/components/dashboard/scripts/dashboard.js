@@ -9,7 +9,6 @@
         self.states.posts=ko.observable(false);
         self.states.currentState = ko.observable(self.states.home);
         self.states.changeState = function (state) {
-            console.log(state());
             var currentState = self.states.currentState();
             currentState(false);
             state(true);

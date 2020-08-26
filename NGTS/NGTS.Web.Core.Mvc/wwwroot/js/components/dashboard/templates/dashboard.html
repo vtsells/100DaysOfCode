@@ -1,10 +1,15 @@
 ﻿
 <div class="ngts-panel ngts-sidebar ngts-content">
-    <div data-bind="component:{name:'dashboard-sidebar', params:states}"></div>
+    <nav class="ngts-sidebar ngts-nav ngts-default" data-bind="component:{name:'dashboard-sidebar', params:states}"></nav>
     <div>
-        <div data-bind="visible:states.home">
-            <h2>Home</h2>
-            <!--<div data-bind="component:'dashboard-albums'"></div>-->
+        <div class="ngts-panel ngts-content ngts-content-divide" data-bind="visible:states.home">
+            <div></div>
+            <div></div>
+            <!--<h2>Home</h2>
+    <div class="ngts-panel ngts-content ngts-content-divide">
+        <div></div>
+        <div></div>
+    </div>-->
         </div>
         <div data-bind="visible:states.photos">
             <div data-bind="component:'dashboard-photos'"></div>

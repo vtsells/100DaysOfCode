@@ -1,6 +1,11 @@
-﻿<div>
-    <h2 data-bind="text:title"></h2>
-    <ul data-bind="foreach: buttons">
-        <li><button data-bind="click:function(){$component.states.changeState(state)}"><i data-bind="css:icon"></i><span data-bind="text:text"></span></button></li>
-    </ul>
+﻿<h2 data-bind="text:title"></h2>
+<hr />
+<ul data-bind="css:{opened:isOpen},foreach: buttons">
+    <li><button class="ngts-default" data-bind="click:function(){$component.states.changeState(state);$component.isOpen(false)}"><i data-bind="css:icon"></i><span data-bind="text:text"></span></button></li>
+</ul>
+<div class="burger" data-bind="css:{change:isOpen},click:toggle">
+    <div></div>
+    <div></div>
+    <div></div>
 </div>
+
