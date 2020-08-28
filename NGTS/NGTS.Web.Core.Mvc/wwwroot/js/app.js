@@ -27,7 +27,10 @@
         viewModel: { require: "dashboard/scripts/dashboard-to-dos" },
         template: { require: "text!dashboard/templates/dashboard-to-dos.html" }
     });
-
+    ko.components.register('widget-lightbox', {
+        viewModel: { require: "widgets/scripts/lightbox" },
+        template: { require: "text!widgets/templates/lightbox.html" }
+    });
 
 
     ko.applyBindings();

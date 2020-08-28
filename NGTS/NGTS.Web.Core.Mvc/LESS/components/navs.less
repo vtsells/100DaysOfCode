@@ -16,6 +16,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         font-size: 1.2em;
+
         > li {
             height: 50px;
             /*background: #f0f;*/
@@ -37,14 +38,7 @@
         }
     }
 
-    hr {
-        border-color: @var-color-accent;
-        border-style: solid;
-        border-width: 2px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-    }
+
 
 
     li {
@@ -52,6 +46,10 @@
             &:hover {
                 background-color: lighten(@var-color-primary,10%);
             }
+        }
+
+        &.active {
+            background-color: lighten(@var-color-primary,10%);
         }
     }
 
@@ -105,7 +103,7 @@
     .burger div {
         width: 35px;
         height: 5px;
-        background-color: #333;
+        background-color: @var-color-primary-burger;
         margin: 6px 0;
         transition: 0.4s;
     }

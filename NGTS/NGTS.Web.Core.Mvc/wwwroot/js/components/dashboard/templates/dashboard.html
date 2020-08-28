@@ -1,25 +1,23 @@
-﻿
+﻿<!--<div data-bind="component:'widget-lightbox'"></div>-->
 <div class="ngts-panel ngts-sidebar ngts-content">
     <nav class="ngts-sidebar ngts-nav ngts-default" data-bind="component:{name:'dashboard-sidebar', params:states}"></nav>
-    <div>
-        <div class="ngts-panel ngts-content ngts-content-divide" data-bind="visible:states.home">
-            <div></div>
-            <div></div>
-            <!--<h2>Home</h2>
+    <!--<div>-->
+    <div class="ngts-panel ngts-content" data-bind="visible:states.albums">
+        <div data-bind="component:'dashboard-albums'"></div>
+
+        <!--<h2>Home</h2>
     <div class="ngts-panel ngts-content ngts-content-divide">
         <div></div>
         <div></div>
     </div>-->
-        </div>
-        <div data-bind="visible:states.photos">
-            <div data-bind="component:'dashboard-photos'"></div>
-        </div>
-        <div data-bind="visible:states.albums">
-            <div data-bind="component:'dashboard-albums'"></div>
-        </div>
-        <div data-bind="visible:states.posts">
+    </div>
+      
+        <div class="ngts-panel ngts-content" data-bind="visible:states.posts">
             <div data-bind="component:'dashboard-posts'"></div>
         </div>
-    </div>
+        <div class="ngts-panel ngts-content" data-bind="visible:states.todos">
+            <div data-bind="component:'dashboard-to-dos'"></div>
+        </div>
+    <!--</div>-->
 
 </div>

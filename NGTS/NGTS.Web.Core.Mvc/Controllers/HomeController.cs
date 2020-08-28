@@ -20,6 +20,11 @@ namespace NGTS.Web.Core.Mvc.Controllers
             var models = await Users.GetUsersAsync();
             return Json(models);
         }
+        public async Task<IActionResult> GetAlbums()
+        {
+            var models = await Albums.GetAlbumsAsync();
+            return Json(models);
+        }
         public IActionResult Privacy()
         {
             return View();

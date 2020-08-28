@@ -2,8 +2,10 @@
 
 
 .ngts-panel {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
     &.ngts-sidebar {
         &.ngts-content {
             display: grid;
@@ -27,6 +29,10 @@
 
         &.ngts-content-divide {
             grid-template-rows: 1fr 1fr;
+        }
+
+        &.ngts-content-divide-third {
+            grid-template-rows: 1fr 1fr 1fr;
         }
     }
 }
