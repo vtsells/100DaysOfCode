@@ -40,7 +40,7 @@
         &:hover {
             background: #33333322;
             color: #eee;
-            font-size: 1rem;
+            font-size: 1.2em;
         }
     }
 
@@ -121,5 +121,18 @@
 @media screen and (max-width : @var-bp-small) {
     .tile-list {
         margin: 0;
+    }
+    .ngts-mosaic {
+        
+        grid-template-columns: repeat(3,1fr);
+        font-size:9px;
+        span {
+            
+
+            &:hover {
+
+                font-size: 1.2em;
+            }
+        }
     }
 }

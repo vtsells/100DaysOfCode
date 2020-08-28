@@ -4,7 +4,7 @@
 .ngts-panel {
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow-y:auto;
 
     &.ngts-sidebar {
         &.ngts-content {
@@ -42,11 +42,11 @@
         &.ngts-sidebar {
             &.ngts-content {
                 display: grid;
-                grid-template-columns: 100vw;
+                grid-template-columns: calc(100vw - (100vw - 100%));
                 grid-template-rows: 60px calc(100vh - 60px);
 
                 &.ngts-content-split {
-                    grid-template-columns: 100vw;
+                    grid-template-columns: calc(100vw - (100vw - 100%));
                     grid-template-rows: 60px calc(50vh - 30px) calc(50vh - 30px);
                 }
             }
@@ -54,11 +54,11 @@
 
         &.ngts-content {
             display: grid;
-            grid-template-columns: 100vw;
+            grid-template-columns: calc(100vw - (100vw - 100%));
             grid-template-rows: calc(100vh - 60px);
 
             &.ngts-content-split {
-                grid-template-columns: 100vw;
+                grid-template-columns: calc(100vw - (100vw - 100%));
                 grid-template-rows: calc(50vh - 30px) calc(50vh - 30px);
             }
 

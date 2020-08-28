@@ -9,7 +9,7 @@
 .ngts-panel {
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
 }
 .ngts-panel.ngts-sidebar.ngts-content {
   display: grid;
@@ -36,20 +36,20 @@
 @media screen and (max-width: 800px) {
   .ngts-panel.ngts-sidebar.ngts-content {
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: calc(100vw - (100vw - 100%));
     grid-template-rows: 60px calc(100vh - 60px);
   }
   .ngts-panel.ngts-sidebar.ngts-content.ngts-content-split {
-    grid-template-columns: 100vw;
+    grid-template-columns: calc(100vw - (100vw - 100%));
     grid-template-rows: 60px calc(50vh - 30px) calc(50vh - 30px);
   }
   .ngts-panel.ngts-content {
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: calc(100vw - (100vw - 100%));
     grid-template-rows: calc(100vh - 60px);
   }
   .ngts-panel.ngts-content.ngts-content-split {
-    grid-template-columns: 100vw;
+    grid-template-columns: calc(100vw - (100vw - 100%));
     grid-template-rows: calc(50vh - 30px) calc(50vh - 30px);
   }
   .ngts-panel.ngts-content.ngts-content-divide {
@@ -188,7 +188,7 @@ nav.ngts-sidebar {
     position: relative;
     display: flex;
     align-items: center;
-    min-width: 368px;
+    /*min-width: 368px;*/
   }
   .ngts-nav.ngts-default hr {
     display: none;
@@ -271,7 +271,7 @@ nav.ngts-sidebar {
 .ngts-mosaic span:hover {
   background: #33333322;
   color: #eee;
-  font-size: 1rem;
+  font-size: 1.2em;
 }
 .ngts-mosaic img {
   width: 100%;
@@ -343,6 +343,13 @@ nav.ngts-sidebar {
 @media screen and (max-width: 800px) {
   .tile-list {
     margin: 0;
+  }
+  .ngts-mosaic {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 9px;
+  }
+  .ngts-mosaic span:hover {
+    font-size: 1.2em;
   }
 }
 .ngts-panel > div:not(.ngts-panel) {
